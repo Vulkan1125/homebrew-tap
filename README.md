@@ -8,7 +8,8 @@ GitHub release, so nothing is compiled locally.
 brew install Vulkan1125/tap/habit
 ```
 
-Upgrade with `brew upgrade habit`, remove with `brew uninstall habit`.
+Upgrade with `brew upgrade habit`, remove with `brew uninstall habit`. `brew livecheck habit`
+reports when a newer release exists.
 
 On Linux use the one-line installer instead:
 
@@ -19,15 +20,13 @@ curl -fsSL https://github.com/Vulkan1125/habit-tracker/releases/latest/download/
 ## How it is maintained
 
 `Formula/habit.rb` points at the `habit-<version>-macos-universal.tar.gz` asset published with each
-release. For a new version, update `url`, `version` and `sha256` (the value published in the
-release's `SHA256SUMS`) and push:
+release, and Homebrew reads the version from that URL. For a new release, edit `url` and `sha256`
+(the value published in the release's `SHA256SUMS`), then check and commit:
 
 ```sh
-old=$(brew info --json=v2 Vulkan1125/tap/habit | jq -r '.formulae[0].versions.stable')
-brew bump-formula-pr --dry-run habit --version=<new>
-# or edit Formula/habit.rb directly and run:
-brew audit --strict --online habit
-brew test habit
+brew audit --strict --online vulkan1125/tap/habit
+brew reinstall vulkan1125/tap/habit && brew test vulkan1125/tap/habit
+git commit -am "habit X.Y.Z" && git push
 ```
 
 ## Licence
