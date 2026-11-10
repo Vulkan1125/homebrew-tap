@@ -11,11 +11,8 @@ brew install Vulkan1125/tap/habit
 Upgrade with `brew upgrade habit`, remove with `brew uninstall habit`. `brew livecheck habit`
 reports when a newer release exists.
 
-On Linux use the one-line installer instead:
-
-```sh
-curl -fsSL https://github.com/Vulkan1125/habit-tracker/releases/latest/download/install.sh | sh
-```
+On Linux use the one-line installer, or pick a package, from the
+[installation section](https://github.com/Vulkan1125/habit-tracker#installation) of the main README.
 
 ## How it is maintained
 
