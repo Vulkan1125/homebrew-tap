@@ -11,8 +11,6 @@ class Habit < Formula
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
-
   def install
     bin.install "habit-#{version}-macos-universal/habit" => "habit"
   end
