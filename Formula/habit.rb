@@ -11,7 +11,7 @@ class Habit < Formula
   end
 
   def install
-    bin.install "habit-#{version}-macos-universal/habit" => "habit"
+    bin.install "habit"
   end
 
   test do
