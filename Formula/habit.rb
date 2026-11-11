@@ -1,8 +1,8 @@
 class Habit < Formula
   desc "Terminal habit tracker with streaks, quotas, dated notes and a heatmap"
   homepage "https://github.com/Vulkan1125/habit-tracker"
-  url "https://github.com/Vulkan1125/habit-tracker/releases/download/v0.8.0/habit-0.8.0-macos-universal.tar.gz"
-  sha256 "3fcc8367812280ded3f8c60c9be4924584ee4f08bc04fa6d9d3676354ae6678e"
+  url "https://github.com/Vulkan1125/habit-tracker/releases/download/v0.9.0/habit-0.9.0-macos-universal.tar.gz"
+  sha256 "dd3780dda1431679108f90ff7ad038e9851fb560be2180e85fb7d7b5bb786eed"
   license "MIT"
 
   livecheck do
